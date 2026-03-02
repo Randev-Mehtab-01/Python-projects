@@ -1,5 +1,6 @@
 expenses = []
 
+#helps create a simple expense tracker that allows users to add expenses, view them, and calculate the total amount spent. The program uses a list to store expenses, where each expense is represented as a dictionary containing the name, category, and amount of the expense. The user can interact with the program through a simple menu-driven interface.
 def add_expense():
     name = input("Enter the name of the expense: ")
     category = input("Enter the category of the expense: ")
