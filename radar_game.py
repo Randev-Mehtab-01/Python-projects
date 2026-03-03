@@ -253,11 +253,9 @@ class Game:
         self.message = ""
         self.message_until = 0.0
 
-        # “sweep” purely for vibes
         self.sweep = 0.0
         self.sweep_speed = 1.25
 
-        # queued salvo shots (launch times)
         self.salvo_queue: List[Tuple[float, int]] = []  # (launch_time, cid)
 
     def set_msg(self, s: str, dur: float = 1.4):
@@ -335,9 +333,6 @@ class Game:
      idx = tids.index(self.locked_id)
      self.locked_id = tids[(idx + 1) % len(tids)]
 
-    # ----------------
-    # IFF
-    # ----------------
     def iff_interrogate(self):
         c = self.find_contact(self.locked_id)
         if c is None:
